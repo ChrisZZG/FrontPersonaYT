@@ -1,0 +1,19 @@
+<div>
+    <div>
+        <h2>Lista de Personas</h2>
+        <div>
+            <button class="btn" type="button" routerLink="/nuevapersona">Agregar Persona</button>
+        </div>
+        <div *ngFor="let Persona of persona">
+            <h2>Nombre del Dev.: {{Persona.nombre}}</h2>
+            <h2>Apellido del Dev.: {{Persona.apellido}}</h2>
+            <p>Descripcion: {{Persona.descripcion}}</p>
+            <div>
+                <button class="btn" routerLink="/editarpersona/{{Persona.id}}">Editar Persona</button>
+            </div>
+            <div>
+                <button class="btn" (click)="delete(Persona.id)">Borrar Persona</button>
+            </div>
+        </div>
+    </div>
+</div>
